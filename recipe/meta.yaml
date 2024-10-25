@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: 30943dc9bfbec14a2c02505433074b40f6551b1dd570f1f33e47df35f6dc73a2
+  sha256: 075b698a95a0a0367e7768429e6c0a0641e2f5ad6c9a0ea4e4871b3d208341fb
 
 build:
   noarch: python
