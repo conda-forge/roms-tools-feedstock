@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "1.4.1" %}
+{% set version = "1.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: 30943dc9bfbec14a2c02505433074b40f6551b1dd570f1f33e47df35f6dc73a2
+  sha256: 075b698a95a0a0367e7768429e6c0a0641e2f5ad6c9a0ea4e4871b3d208341fb
 
 build:
   noarch: python
@@ -50,6 +50,10 @@ about:
   summary: Tools for creating input files for UCLA-ROMS simulations
   license: Apache-2.0
   license_file: LICENSE
+  description: |
+    **ROMS-Tools** is a Python package designed for creating the input files necessary to run a ROMS simulation. The package 
+    simplifies the process of generating grid, tidal forcing, surface forcing, initial conditions, and boundary forcing.
+    ROMS-Tools supports the generation of biogeochemical forcing consistent with ROMS-MARBL.
 
 extra:
   recipe-maintainers:
