@@ -1,5 +1,6 @@
 {% set name = "roms-tools" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: 7dfaf1143a88d41af95b46f0eadd788d0459bb911fa824a79219cade810eb11f
+  sha256: dfb51aa349d3509eac67261cc67670d20582ef3749c3292b2b4de7aec28e874c
 
 build:
   noarch: python
@@ -16,14 +17,14 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}.*
     - setuptools >=61.0.0
     - wheel
     - setuptools-scm >=7.0
     - check-manifest
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - xarray >=2022.6.0
     - numpy
     - pooch
