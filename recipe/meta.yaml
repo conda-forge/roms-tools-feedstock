@@ -17,7 +17,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}.*
+    - python {{ python_min }}
     - setuptools >=61.0.0
     - wheel
     - setuptools-scm >=7.0
@@ -39,6 +39,8 @@ requirements:
     - bottleneck
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - roms_tools
   commands:
