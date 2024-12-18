@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "1.7.0" %}
+{% set version = "2.0.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: b26bf1ca5a34e0f64353bfad1cff395f4f3247604555b30976168ca292e4dcef
+  sha256: 0b73cc7d6150c23ec160be57e6b89a5b8f4e04a94e50dbbc1bb891a4001b2c59
 
 build:
   noarch: python
@@ -38,16 +38,16 @@ requirements:
     - pyamg
     - bottleneck
     - dask
+    - regionmask
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - roms_tools
   commands:
     - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/CWorthy-ocean/roms-tools
