@@ -37,7 +37,8 @@ requirements:
     - pyyaml
     - pyamg
     - bottleneck
-    - dask[diagnostics]
+    - dask
+    - dask-diagnostics
 
 test:
   requires:
