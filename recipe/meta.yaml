@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: a5677da9b156fc0772bb6e460c05a45f7768040aae2f2c9153691f3d749d252f
+  sha256: c5a30d5e198f735b75566e6db7735648a418b0b6829a937dbab8221c6f785bb6
 
 build:
   noarch: python
@@ -39,6 +39,9 @@ requirements:
     - bottleneck
     - dask
     - regionmask
+    - xgcm
+    - numba
+    - xesmf >=0.8.8
 
 test:
   requires:
