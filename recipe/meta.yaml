@@ -41,7 +41,7 @@ requirements:
     - regionmask
     - xgcm
     - numba
-    - xesmf
+    - xesmf >=0.8.8
 
 test:
   requires:
