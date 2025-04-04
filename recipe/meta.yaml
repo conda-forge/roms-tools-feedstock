@@ -39,6 +39,9 @@ requirements:
     - bottleneck
     - dask
     - regionmask
+    - xgcm
+    - numba
+    - xesmf
 
 test:
   requires:
