@@ -1,6 +1,6 @@
 {% set name = "roms-tools" %}
-{% set version = "2.7.0" %}
-{% set python_min = "3.10" %}
+{% set version = "3.0.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: 3fae3a7a6559eda05bc73d4bdd8d0f8432d16c23d69c278ade9a005d48769dbc
+  sha256: 11b9546f83c164258fcbbb2ecee78a79a08d8b510f8fa0812aed26b96719f895
 
 build:
   noarch: python
@@ -26,22 +26,24 @@ requirements:
   run:
     - python >={{ python_min }}
     - xarray >=2022.6.0
-    - numpy
+    - numpy >2.0,<2.3
     - pooch
     - matplotlib-base
     - cartopy
     - packaging
     - scipy
-    - gcm_filters
+    - gcm_filters >=0.5.1
     - netcdf4
     - pyyaml
     - pyamg
     - bottleneck
-    - dask
     - regionmask
     - xgcm
-    - numba
+    - numba >=0.61.2
+    - pydantic >2,<3
+    - dask
     - xesmf >=0.8.8
+    - gcsfs
 
 test:
   requires:
@@ -58,9 +60,9 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   description: |
-    **ROMS-Tools** is a Python package designed for creating the input files necessary to run a ROMS simulation. The package 
-    simplifies the process of generating grid, tidal forcing, surface forcing, initial conditions, and boundary forcing.
-    ROMS-Tools supports the generation of biogeochemical forcing consistent with ROMS-MARBL.
+    **ROMS-Tools** is a Python package designed for creating the input files necessary to run a UCLA-ROMS simulation, with or without MARBL biogeochemistry. 
+    The package simplifies the process of generating grid, tidal forcing, surface forcing, initial conditions, boundary forcing, river forcing, carbon dioxide removal (CDR) forcing, and nesting.
+    In addition to input generation, ROMS-Tools includes utilities for postprocessing and analysis, particularly for CDR monitoring, reporting, and verification (MRV).
 
 extra:
   recipe-maintainers:
