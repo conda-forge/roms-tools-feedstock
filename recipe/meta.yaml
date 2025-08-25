@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.2" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: b3459e7b53169d612afcec0e66e47e05397f98c1d59b2d2e47521919a87c9b0b
+  sha256: 1ca13644a7ffee7337a57b9d4aeb14bc4a5af85803329d8531181e35492c1e3e
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - xarray >=2022.6.0
+    - xarray >=2022.6.0,<2025.8.0
     - numpy >2.0,<2.3
     - pooch
     - matplotlib-base
@@ -38,12 +38,14 @@ requirements:
     - pyamg
     - bottleneck
     - regionmask
-    - xgcm
+    - xgcm >=0.9.0
     - numba >=0.61.2
     - pydantic >2,<3
     - dask
     - xesmf >=0.8.8
     - gcsfs
+    - copernicusmarine
+    - zarr
 
 test:
   requires:
