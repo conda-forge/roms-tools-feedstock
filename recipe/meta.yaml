@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - xarray >=2022.6.0
+    - xarray >=2022.6.0,<2025.8.0
     - numpy >2.0,<2.3
     - pooch
     - matplotlib-base
@@ -38,12 +38,14 @@ requirements:
     - pyamg
     - bottleneck
     - regionmask
-    - xgcm
+    - xgcm >=0.9.0
     - numba >=0.61.2
     - pydantic >2,<3
     - dask
     - xesmf >=0.8.8
     - gcsfs
+    - copernicusmarine
+    - zarr
 
 test:
   requires:
