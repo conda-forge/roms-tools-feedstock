@@ -37,7 +37,7 @@ requirements:
     - pyyaml
     - pyamg
     - bottleneck
-    - regionmask >= 0.11.0
+    - regionmask >=0.11.0
     - xgcm >=0.9.0
     - numba >=0.61.2
     - pydantic >2,<3
