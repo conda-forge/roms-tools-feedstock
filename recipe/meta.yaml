@@ -48,6 +48,7 @@ requirements:
     - zarr
     - gsw
     - imageio-ffmpeg
+    - click >=8.3.2
 
 test:
   requires:
