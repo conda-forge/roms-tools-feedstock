@@ -1,6 +1,6 @@
 {% set name = "roms-tools" %}
-{% set version = "4.0.0a1" %}
-{% set python_min = "3.11" %}
+{% set version = "4.0.0a2" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: d151124723f75b0ea626f5be887e250277b067e227e32989aa19d1f5c526eb42
+  sha256: b4736bc89b85e81ea8bf2c9509571b27bb93abe182a70f3b72a41020b73e5b4d
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
     - matplotlib-base
     - cartopy
     - packaging
-    - scipy
+    - scipy >=1.18.0
     - gcm_filters >=0.5.1
     - netcdf4
     - pyyaml
@@ -46,6 +46,9 @@ requirements:
     - gcsfs
     - copernicusmarine
     - zarr
+    - gsw
+    - imageio-ffmpeg
+    - click >=8.3.2
 
 test:
   requires:
