@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "4.0.0a2" %}
+{% set version = "3.7.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: b4736bc89b85e81ea8bf2c9509571b27bb93abe182a70f3b72a41020b73e5b4d
+  sha256: 62d62e98a4326a2427d024e66d8bf3158ed5b2615185f9cf56f457ad3368c7af
 
 build:
   noarch: python
@@ -38,7 +38,7 @@ requirements:
     - pyamg
     - bottleneck
     - regionmask >=0.11.0
-    - xgcm >=0.9.0
+    - xgcm >=0.9.0,<0.10.0
     - numba >=0.61.2
     - pydantic >2,<3
     - dask
@@ -49,6 +49,8 @@ requirements:
     - gsw
     - imageio-ffmpeg
     - click >=8.3.2
+    - h5py
+    - h5netcdf
 
 test:
   requires:
