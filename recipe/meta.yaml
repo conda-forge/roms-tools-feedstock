@@ -50,7 +50,7 @@ requirements:
     - imageio-ffmpeg
     - click >=8.3.2
     - h5py
-    - h5netdcdf
+    - h5netcdf
 
 test:
   requires:
