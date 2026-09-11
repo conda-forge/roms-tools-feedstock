@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "4.1.1" %}
+{% set version = "5.0.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: c516d2a1d534000d95835e93d4de052e129b5a5677e0a0a4b886bbd0e00b5285
+  sha256: 409ba20f7f0f83516405053cb46e033095c1c94ae3ea43d1da5d8be9649236a4
 
 build:
   noarch: python
@@ -44,6 +44,7 @@ requirements:
     - pydantic >2,<3
     - dask
     - h5netcdf
+    - threadpoolctl
     # full feature set beyond the PyPI core deps: xesmf regridding (conda-only),
     # cloud data streaming, CDR-monitoring movie export
     - xesmf >=0.8.8
