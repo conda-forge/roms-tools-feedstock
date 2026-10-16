@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "5.2.0" %}
+{% set version = "5.2.1" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: 1a233f97d9c2f75525178f1665bdc92f5225ae30d25cd52569bc49896cff35ab
+  sha256: b60a7b7e6f3ff9b84439f2cba784e5be448c55aaea375a5bae294b2f4024eb2e
 
 build:
   noarch: python
