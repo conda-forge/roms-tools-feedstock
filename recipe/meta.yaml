@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "5.2.1" %}
+{% set version = "5.2.2" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: b60a7b7e6f3ff9b84439f2cba784e5be448c55aaea375a5bae294b2f4024eb2e
+  sha256: b0c2ec180b43821b78909eb28fa5c82f23de027da3671ad388c08a08b3422047
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - xarray >=2022.6.0
-    - numpy >2.0,<2.3
+    - numpy >2.0,<2.4
     - pooch
     - matplotlib-base <3.11
     - cartopy
