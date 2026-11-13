@@ -1,5 +1,5 @@
 {% set name = "roms-tools" %}
-{% set version = "5.3.0" %}
+{% set version = "5.4.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/roms_tools-{{ version }}.tar.gz
-  sha256: fc9589064b18f9770c5f576b59235b75b208ba55b3bad4b191809ba3f601da55
+  sha256: 82c7c5b7ed714ef618254bb351306b67ae101c6bc738d2212cd0f0fac5a62a98
 
 build:
   noarch: python
@@ -46,9 +46,10 @@ requirements:
     - h5netcdf
     - threadpoolctl
     # full feature set beyond the PyPI core deps: xesmf regridding (conda-only),
-    # cloud data streaming, CDR-monitoring movie export
+    # cloud data streaming (ERA5 via gcsfs, CONUS404 via s3fs), CDR-monitoring movie export
     - xesmf >=0.8.8
     - gcsfs
+    - s3fs
     - copernicusmarine
     - zarr
     - imageio-ffmpeg
